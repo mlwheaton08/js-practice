@@ -220,10 +220,16 @@ const animals = [
 // }
 
 // SORT BY ID
-for (i = 1; i < 10; i++) {
+idSort=[];
+for (i = 0; i < animals.length; i++) {
+  idSort.push(animals[i].id);
+}
+maxIdNum = Math.max(...idSort);
+
+for (i = 1; i <= maxIdNum; i++) {
   for (const animal of animals) {
     if (animal.id === i) {
-      console.log(animal.id);
+      console.log(animal);
     }
   }
 }
